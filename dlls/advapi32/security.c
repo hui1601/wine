@@ -277,7 +277,8 @@ GetEffectiveRightsFromAclW( PACL pacl, PTRUSTEEW pTrustee, PACCESS_MASK pAccessR
 {
     FIXME("%p %p %p - stub\n", pacl, pTrustee, pAccessRights);
 
-    return 1;
+    *pAccessRights = FILE_ALL_ACCESS;
+    return ERROR_SUCCESS;
 }
 
 /*	##############################################
